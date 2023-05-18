@@ -48,8 +48,11 @@ if (isset($_GET['id'])){
             break;
 
         case 'logout':
-            echo "You selected logout ";
-            break;
+            session_start(); //perform logout action
+            $_SESSION = array(); //clear session variables
+            session_destroy(); //destroy the session
+            header("Location: login.php"); // redirect to the login page or any other desired page
+            exit();
         
         default:
             # code...
