@@ -36,8 +36,8 @@
                         <td>" . $row['email']. "</td>
                         <td>" . $row['password']. "</td>
                         <td>" . $row['confirm_password']. "</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
+                        <td><a href= ''>Edit</a/></td>
+                        <td><a href= 'delete.php?id=$row[id]'>Delete</a></td>
                     </tr>";
         echo "</table>";
         ?>
