@@ -72,6 +72,7 @@ if (isset($_POST['submit'])){
     $sql= "SELECT *FROM users WHERE fname='$first' AND password='$pwd'";
     $result = $database_connection->query($sql);
     if ($result->num_rows > 0){
+        $_SESSION['fname'] = $first;
         header('Location: dashboard.php');
     }
     else{

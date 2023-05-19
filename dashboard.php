@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,7 @@
 </head>
 <body>
     <div>
+        <h6><?php echo "Welcome ". $_SESSION['fname']; ?></h6>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <ul class="navbar-nav w-100 d-flex justify-content-between">
