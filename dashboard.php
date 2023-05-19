@@ -65,14 +65,10 @@ if (isset($_GET['id'])){
             break;
 
         case 'logout':
-            session_start(); //perform logout action
-            $_SESSION = array(); //clear session variables
-            session_destroy(); //destroy the session
-            header("Location: login.php"); // redirect to the login page or any other desired page
-            exit();
+            include_once 'logout.php';
         
         default:
-            # code...
+            echo "404 file not found";
             break;
     }
 }

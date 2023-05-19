@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,9 @@
                 <th colspan='2'>Action</th>
             </tr>";
              include_once "config.php";
-             $sql = "SELECT * FROM users WHERE fname='jeff5050'";
+
+             $user_loggedin = $_SESSION['fname'];
+             $sql = "SELECT * FROM users WHERE fname='$user_loggedin'";
              $result = $database_connection->query($sql);
              $row = $result-> fetch_assoc();
              echo "<tr>
