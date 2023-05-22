@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php session_start();
+    if (!isset($_SESSION['fname'])){
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +69,7 @@ if (isset($_GET['id'])){
             break;
 
         case 'logout':
-            include_once 'logout.php';
+            include_once "logout.php";
         
         default:
             echo "404 file not found";
